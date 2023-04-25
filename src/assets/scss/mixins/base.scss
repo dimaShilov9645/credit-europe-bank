@@ -1,0 +1,70 @@
+@mixin typo($fs, $lh, $ls) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin color-hover($clr, $clr_h) {
+  color: $clr;
+
+  &:hover {
+    color: $clr_h;
+  }
+}
+
+//@mixin link($clr, $clr_h) {
+//  @include color-hover($clr, $clr_h);
+//  text-decoration: none;
+//  transition: color;
+//}
+
+@mixin bg-color-hover($clr, $clr_h) {
+  background-color: $clr;
+
+  &:hover {
+    background-color: $clr_h;
+  }
+}
+
+// Media queries
+
+@mixin media-1440 {
+  @media (max-width: 1439px) {
+    @content;
+  }
+}
+@mixin media-1200 {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin media-1024 {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin media-768 {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media-480 {
+  @media (max-width: 479px) {
+    @content;
+  }
+}
+
+@mixin media-375 {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin media-custom($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}

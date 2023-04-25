@@ -1,6 +1,16 @@
+@import "vars";
+@import "mixins/icons";
+@import "mixins/base";
 @import "../fonts/Geometria/geometria";
 
-$primary-color: #2773ee;
-.class_dom {
-  color: $primary-color;
+.button_text {
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-center {
+    text-align: center;
+  }
 }
